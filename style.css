@@ -1,0 +1,176 @@
+:root {
+  --violeara: #2e003e;
+  --rojizo: #960018;
+  --texto: #333;
+  --fondo: #fafafa;
+  --fondo-compas: #f3eaf7;
+  --blanco: #ffffff;
+}
+
+/* General */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: var(--fondo);
+  background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  color: var(--texto);
+  scroll-behavior: smooth;
+}
+
+.contac {
+  background-color: rgb(182, 255, 65);
+  background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+  backdrop-filter: blur(6px);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.contac a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: var(--violeara);
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.contac a:hover {
+  color: var(--rojizo);
+}
+
+/* Títulos y enlaces */
+h1 {
+  color: var(--violeara);
+  font-size: 3rem; /* o prueba con 5rem, 6rem */
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+a {
+  color: var(--rojizo);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.present {
+  text-align: center;
+  color: rgb(15, 1, 92);
+}
+
+/* Contenedor principal - Flex */
+.conten {
+  display: flex;
+  gap: 20px;
+  padding: 50px;
+  align-items: stretch; /* igual altura */
+}
+
+/* Izquierda: Sobre mí + Cursos apilados */
+.lado-izquierdo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+/* Estilo común para ambos cuadros dentro de lado izquierdo */
+.sobre-mi,
+.cursos {
+  background-color: var(--blanco);
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  flex-grow: 1; /* que llenen igual altura */
+}
+
+/* Derecha: Profesores */
+.prof {
+  background-color: var(--blanco);
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Grid para profesores */
+.profes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+  justify-items: center;
+}
+
+/* Sección de compañeros */
+.compas {
+  padding: 60px 30px;
+  border-radius: 15px;
+  background-color: var(--fondo-compas);
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+  text-align: center;
+}
+
+.compas h2 {
+  color: var(--violeara);
+  margin-bottom: 40px;
+}
+
+.comp-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.perfil {
+  background-color: var(--blanco);
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.perfil:hover {
+  transform: scale(1.05);
+}
+
+.perfil img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.perfil p {
+  margin: 0;
+  font-weight: bold;
+  color: var(--texto);
+}
